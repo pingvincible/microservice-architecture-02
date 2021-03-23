@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2alpha4
+kind: Config
+metadata:
+  name: configuration
+build:
+  artifacts:
+  - image: pingvincible/crud-service
+    context: crudapp
+deploy:
+  kubectl:
+    manifests:
+    - postgres.yaml
+    - app-config.yaml
+    - deployment.yaml
+    - service.yaml
