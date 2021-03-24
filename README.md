@@ -12,3 +12,6 @@ Run:
 
 Test:
     newman run ./crud-service.postman_collection.json
+
+Delete: 
+    helm uninstall crud-service
