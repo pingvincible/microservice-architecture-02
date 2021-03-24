@@ -7,9 +7,9 @@ Create namespace
     kubectl create namespace crudapp
     kubectl config set-context --current --namespace=crudapp
 
-Run for base version:
-    kubectl -f apply ./manifests_base
-
+Run with skaffold:
+    kubectl -f apply ./postgres.yaml
+    skaffold run
 
 Test:
     newman run ./crud-service.postman_collection.json
