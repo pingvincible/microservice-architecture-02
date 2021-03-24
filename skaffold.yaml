@@ -5,11 +5,12 @@ metadata:
 build:
   artifacts:
   - image: pingvincible/crud-service
-    context: crudapp
+    docker:
+      dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
-    - postgres.yaml
     - app-config.yaml
     - deployment.yaml
     - service.yaml
+    - ingress.yaml

@@ -14,7 +14,7 @@ spec:
        spec:
           containers:
           - name: crud-service
-            image: pingvincible/crud-service:0.5
+            image: pingvincible/crud-service:0.6
             env:
               - name: DATABASE_URI
                 valueFrom:

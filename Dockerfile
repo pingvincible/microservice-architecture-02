@@ -1,6 +1,6 @@
 FROM golang:latest as builder
 WORKDIR /app
-COPY . .
+COPY ./crud-service .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -o main ./cmd/main
 
 ###### Start a new stage ######
