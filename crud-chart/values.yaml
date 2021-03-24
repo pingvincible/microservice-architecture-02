@@ -11,9 +11,10 @@ service:
 ingress:
   enabled: true
 
-externalPostgresql:
+postgresql:
+  enabled: true
   postgresqlUsername: cruduser
   postgresqlPassword: crudpass
   postgresqlDatabase: crudapp
-  postgresqlHost: "postgres"
-  postgresqlPort: "5432"
+  service:
+    port: "5432"
