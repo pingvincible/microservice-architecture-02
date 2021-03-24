@@ -1,0 +1,19 @@
+replicaCount: 3
+
+image:
+  repository: pingvincible/crud-service
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 9000
+
+ingress:
+  enabled: true
+
+externalPostgresql:
+  postgresqlUsername: cruduser
+  postgresqlPassword: crudpass
+  postgresqlDatabase: crudapp
+  postgresqlHost: "postgres"
+  postgresqlPort: "5432"
